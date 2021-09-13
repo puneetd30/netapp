@@ -1,0 +1,36 @@
+version: "3"
+services:
+    net-app:
+        container_name: net-app
+        image: net-app
+        restart: always
+        build: .
+        ports:
+            - "8000:8000"
+        links:
+            - mongo
+    monitor-app:
+        container_name: monitor-app
+        image: monitor-app
+        restart: always
+        build: .
+        ports:
+            - "8001:3002"
+        links:
+            - mongo
+    monitor-retro-app:
+        container_name: monitor-retro-app
+        image: monitor-retro-app
+        restart: always
+        build: .
+        ports:
+            - "8002:3003"
+        links:
+            - mongo
+    mongo:
+        container_name: mongo
+        image: mongo:4.2
+        volumes:
+            - ./data:/data/db
+        ports:
+            - '27018:27017'
