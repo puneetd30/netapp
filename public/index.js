@@ -26,8 +26,6 @@ window.onload = () => {
     $$('#register-btn').addEventListener('click', async () => {
 
         const appName = $$('#app-id').value;
-
-
         const freq = $$('#freq').value;
         const appUrl = $$('#app-url').value;
 
@@ -64,14 +62,11 @@ window.onload = () => {
         const keys = headers.querySelectorAll('.header-key');
         const values = headers.querySelectorAll('.header-value');
 
-        // const headerArr = [];
         const headerJson = {};
         for (let ind = 0; ind < keys.length; ind++) {
             if (keys[ind] && values[ind]) {
-                // headerArr.push(`{${keys[ind].value}:${values[ind].value}}`);
                 headerJson[keys[ind].value]=values[ind].value;
             }
-
         }
 
         await fetch('/register', {
