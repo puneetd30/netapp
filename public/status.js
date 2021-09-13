@@ -22,7 +22,7 @@ window.onload = async () => {
                         data-title=${appData[ind].status == 'green' ? 'No Outage Detected' : 'Outage Detected'} 
                         data-date=${appData[ind].reportDate} fill=${appData[ind].status == 'green' ? '#28a745' :
                          '#acaa19'}>
-                         <title>${appData[ind].status == 'green' ? 'No Outage Detected' : 'Outage Detected'} on ${appData[ind].reportDate}
+                         <title>${appData[ind].status == 'green' ? 'No Outage Detected' : 'Outage Detected'} on ${new Date(appData[ind].reportDate).toLocaleDateString()}
                          </title>
                         </rect>`;
             initialStep += stepDiff;
