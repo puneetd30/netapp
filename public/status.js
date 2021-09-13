@@ -27,34 +27,8 @@ window.onload = async () => {
                         </rect>`;
             initialStep += stepDiff;
         }
-
-        // $$('rect').forEach(ele => {
-        //     ele.addEventListener('mouseover', (evt) => {
-        //         console.log(evt.target.dataset.date);
-        //         $$('.tooltip').style='display:block';
-        //     });
-        //     ele.addEventListener('mouseout', () => {
-        //         $$('.tooltip').style='display:none';
-        //     });
-        // });
     }
 
-
-
     $$('#graph-section').insertAdjacentHTML('beforeend', appDiv);
-    // $$$('rect').forEach(ele => {
-    //     ele.addEventListener('mouseover', (evt) => {
-    //         console.log(evt.target.dataset.date);
-    //         $$('.tooltip').hidden=false;
-    //     });
-    //     ele.addEventListener('mouseout', () => {
-    //         $$('.tooltip').hidden=true
-    //     });
-    // });
+
 }
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     // your code here
-
-    
-//  }, false);
