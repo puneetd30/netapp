@@ -1,12 +1,11 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 8000
-var bodyParser = require('body-parser')
-var jsonParser = bodyParser.json()
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
+var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
 const config = require('./config');
-// app.use(express.static('public'))
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'public')))
+const path = require('path');
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
 var MongoClient = require('mongodb').MongoClient;
@@ -39,7 +38,7 @@ app.post('/register', jsonParser, (req, res) => {
     }
 
   });
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile(__dirname + '/index.html');
 })
 
 app.get('/metrics', (req, res) => {
