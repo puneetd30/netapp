@@ -24,6 +24,7 @@ docker-compose up : to link all the apps and run
 docker-compose up -d : to run in background
 
 Above command will load and start the app.
+
 Please ensure images of net-app,monitor-app, monitor-retro-app are already built before docker compose.
 
 After docker compose verify ${url} from aws or localhost:
