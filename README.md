@@ -4,7 +4,9 @@ This App does service registration and show graphs for registered services.
 ## Run local
 In config.js, uncomment the localhost one for running locally
 
-Use command npm start for local run
+npm install: to download all dependencies
+
+npm start: for local run
 
 Please ensure mongodb is installed for local run
 
